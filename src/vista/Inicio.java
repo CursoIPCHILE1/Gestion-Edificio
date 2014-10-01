@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 package vista;
-
+import javax.swing.JOptionPane;
+import negocio.Usuario;
 /**
  *
  * @author Profesor
@@ -35,6 +36,11 @@ public class Inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("Acceder");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Usuario");
@@ -79,6 +85,25 @@ public class Inicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String usuario = tf_usuario.getText();
+        String pass = tf_pass.getText();
+        
+        Usuario u = new Usuario();
+        u.setUsuario(usuario);
+        u.setPass(pass);
+        
+        if(u.validar(u)){
+            JOptionPane.showMessageDialog(this, "El usuario Existe");
+        }else{
+            JOptionPane.showMessageDialog(this, "El usuario NO Existe");
+        }
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
