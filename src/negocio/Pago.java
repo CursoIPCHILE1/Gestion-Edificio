@@ -5,7 +5,7 @@
 package negocio;
 
 import java.util.Date;
-
+import datos.*;
 /**
  *
  * @author Arturoandres
@@ -20,9 +20,15 @@ public class Pago {
     public Pago() {
     }
     
-     public int GenerarPagos() {
-        int generapago = 0;
-         return generapago;
+     public boolean GenerarPagos(Pago pag) {
+        bdpago bp = new bdpago();
+        if(bp.GenerarPagos(pag)){
+        return true;
+        }else{
+        return false;
+        }
+         
+         
     }
 
     public Pago(int id, int monto, Date fechapago, Departamento pago) {

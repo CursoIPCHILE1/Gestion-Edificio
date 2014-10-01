@@ -6,6 +6,7 @@ package vista;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import negocio.*;
 
 /**
@@ -54,7 +55,7 @@ public class Pago extends javax.swing.JFrame {
 
         jLabel3.setText("FECHA");
 
-        jLabel4.setText("Pago Depto");
+        jLabel4.setText("Pago N. Depto");
 
         jButton1.setText("PAGAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +93,6 @@ public class Pago extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(montoapagar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(idpago, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pagonumdepto, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -107,7 +107,8 @@ public class Pago extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(año, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(año, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(pagonumdepto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -161,6 +162,18 @@ public class Pago extends javax.swing.JFrame {
         pag.setFechapago(date);
         negocio.Departamento depto = new negocio.Departamento();
         pag.setPago(depto);
+        
+        
+        if (pag.GenerarPagos(pag)) {
+            
+            JOptionPane.showMessageDialog(this, "Datos Guardados");
+        
+        }else   {
+            
+            JOptionPane.showMessageDialog(this, "Datos No Guardados");
+        }
+       
+        
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
