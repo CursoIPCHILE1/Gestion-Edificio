@@ -7,6 +7,7 @@ package datos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import negocio.Usuario;
 import negocio.Pago;
 
@@ -23,26 +24,31 @@ public class bdpago {
     public boolean GenerarPagos(Pago p){
      //se establese la coneccion con la base de datos
         conn = Conector.conectorBd();
-     //desmembramos la clase pego y los pasamos de String a integer con parse int
-     String id =String.valueOf(p.getId());
-     String monto=String.valueOf(p.getMonto());
-     String fecha=String.valueOf(p.getFechapago());
-     String Departamento=String.valueOf(p.getPago());
+     //desmembramos la clase pago y los pasamos de String a integer con parse int
+     int id =p.getId();
+     int monto=p.getMonto();
+     String fecha=(p.getFechapago());
+     int Departamento=(p.getNdepto());
      //se hace la query para la base de datos
-     String sql ="insert into pago values("+id+","+monto+","+fecha+",'"+Departamento+"')";
+     String sql ="insert into pago values("+id+",'"+fecha+"',"+Departamento+",'si',"+monto+")";
      //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos   
      try{
-            pst = conn.prepareStatement(sql);
+         JOptionPane.showMessageDialog(null, sql);
+         pst = conn.prepareStatement(sql);
+            pst.execute();
             
-            if(pst.execute()){
+            return true;
+          /*  if(pst.execute()){
+                
                return true;
                 
             }else {
            return false;
             
-            }
+            }*/
             
         }catch(Exception e){
+           
             return false;
         }
        
