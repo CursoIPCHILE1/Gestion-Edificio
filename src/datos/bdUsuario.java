@@ -20,7 +20,15 @@ public class bdUsuario {
      conn = Conector.conectorBd();
      
      String us =u.getUsuario();
-     String pa =u.getPass();
+     int pa =u.getPassword();
+     int co =u.getCodigo();
+     String di =u.getDireccion();
+     int fo =u.getFono();
+     String car =u.getCargo();
+     int ru =u.getRut();
+     String ho =u.getHorario();
+     String tur =u.getTurno();
+     
      
      String sql ="select * from usuario where nombre='" + us+"' and apellido='" + pa +"'";
         try{
