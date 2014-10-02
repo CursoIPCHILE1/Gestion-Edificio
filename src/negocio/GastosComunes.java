@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author Profesor
+ * @author Luis
  */
 public class GastosComunes {
     
