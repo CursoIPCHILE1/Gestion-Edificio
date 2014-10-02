@@ -25,7 +25,6 @@ public class bdUsuario {
      String di =u.getDireccion();
      int fo =u.getFono();
      String car =u.getCargo();
-     Perfil tu = u.getTipoUsuario();
      int ru =u.getRut();
      String ho =u.getHorario();
      String tur =u.getTurno();
