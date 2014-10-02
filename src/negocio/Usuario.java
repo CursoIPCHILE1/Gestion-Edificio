@@ -11,7 +11,7 @@ import datos.bdUsuario;
 public class Usuario {
     
     private String usuario;
-    private String password;
+    private int password;
     private int codigo;
     private String direccion;
     private int fono;
@@ -23,11 +23,11 @@ public class Usuario {
     
     public Usuario(){}
 
-    public String getPassword() {
+    public int getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(int password) {
         this.password = password;
     }
 
@@ -103,15 +103,15 @@ public class Usuario {
         this.usuario = usuario;
     }
 
-    public String getPass() {
+    public int getPass() {
         return password;
     }
 
-    public void setPass(String pass) {
+    public void setPass(int pass) {
         this.password = pass;
     }
     
-    public Boolean validar(Usuario usu){
+    public Boolean valida(Usuario usu){
     
         bdUsuario usua = new bdUsuario();
         
