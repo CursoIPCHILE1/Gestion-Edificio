@@ -14,7 +14,7 @@ public class Pago {
     
     public int id;
     public int monto;
-    public Date fechapago;
+    public String fechapago;
     public int Ndepto;
 
     public Pago() {
@@ -49,11 +49,11 @@ public class Pago {
         this.monto = monto;
     }
 
-    public Date getFechapago() {
+    public String getFechapago() {
         return fechapago;
     }
 
-    public void setFechapago(Date fechapago) {
+    public void setFechapago(String fechapago) {
         this.fechapago = fechapago;
     }
 

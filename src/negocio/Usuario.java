@@ -11,9 +11,89 @@ import datos.bdUsuario;
 public class Usuario {
     
     private String usuario;
-    private String pass;
+    private String password;
+    private int codigo;
+    private String direccion;
+    private int fono;
+    private String cargo;
+    private Perfil tipoUsuario;
+    private int rut;
+    private String horario;
+    private String turno;
     
     public Usuario(){}
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getFono() {
+        return fono;
+    }
+
+    public void setFono(int fono) {
+        this.fono = fono;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public Perfil getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(Perfil tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public int getRut() {
+        return rut;
+    }
+
+    public void setRut(int rut) {
+        this.rut = rut;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
 
     public String getUsuario() {
         return usuario;
@@ -24,11 +104,11 @@ public class Usuario {
     }
 
     public String getPass() {
-        return pass;
+        return password;
     }
 
     public void setPass(String pass) {
-        this.pass = pass;
+        this.password = pass;
     }
     
     public Boolean validar(Usuario usu){
@@ -40,9 +120,15 @@ public class Usuario {
         }else{
             return false;
         }
-        
-        
-        
+    }
+     public Boolean crearUsuario(Usuario usu){
+         return null;
+     }   
+     public Boolean actualizarUsuario(Usuario usu){
+         return null;
+     }   
+     public Boolean eliminarUsuario(Usuario usu){
+         return null;
     }
     
     

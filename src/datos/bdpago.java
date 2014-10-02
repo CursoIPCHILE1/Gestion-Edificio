@@ -27,22 +27,25 @@ public class bdpago {
      //desmembramos la clase pago y los pasamos de String a integer con parse int
      int id =p.getId();
      int monto=p.getMonto();
-     String fecha=String.valueOf(p.getFechapago());
+     String fecha=(p.getFechapago());
      int Departamento=(p.getNdepto());
      //se hace la query para la base de datos
-     String sql ="insert into pago values("+id+","+monto+",'"+fecha+"',"+Departamento+")";
+     String sql ="insert into pago values("+id+",'"+fecha+"',"+Departamento+",'si',"+monto+")";
      //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos   
      try{
          JOptionPane.showMessageDialog(null, sql);
          pst = conn.prepareStatement(sql);
+            pst.execute();
             
-            if(pst.execute()){
+            return true;
+          /*  if(pst.execute()){
+                
                return true;
                 
             }else {
            return false;
             
-            }
+            }*/
             
         }catch(Exception e){
            e.printStackTrace();
