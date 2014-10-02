@@ -15,20 +15,23 @@ import negocio.Pago;
  * @author Arturoandres
  */
 public class bdpago {
- Connection conn = null;
+ //traemos la coneccion ya instanciada en conector 
+    Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
-    
+   //se crea un metodo llamado generar pagos
     public boolean GenerarPagos(Pago p){
-     conn = Conector.conectorBd();
-     
+     //se establese la coneccion con la base de datos
+        conn = Conector.conectorBd();
+     //desmembramos la clase pego y los pasamos de String a integer con parse int
      String id =String.valueOf(p.getId());
      String monto=String.valueOf(p.getMonto());
      String fecha=String.valueOf(p.getFechapago());
      String Departamento=String.valueOf(p.getPago());
-     
+     //se hace la query para la base de datos
      String sql ="insert into pago values("+id+","+monto+","+fecha+",'"+Departamento+"')";
-        try{
+     //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos   
+     try{
             pst = conn.prepareStatement(sql);
             
             if(pst.execute()){
