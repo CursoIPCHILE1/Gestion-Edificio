@@ -48,7 +48,7 @@ public class bdpago {
             }*/
             
         }catch(Exception e){
-           e.printStackTrace();
+           
             return false;
         }
        
