@@ -9,10 +9,11 @@ import datos.*;
  * @author Arturoandres
  */
 public class Departamento {
-    
-    private int cod;
-    private int NumDepto;
-    private String NombreDueño;
+    private int id_dpto;
+    private int codlav;
+    private int codedi;        
+    private int n_dpto;
+  
 
     public Departamento() {
     }
@@ -26,32 +27,41 @@ public class Departamento {
         }
     }
 
-  
-
-    public int getCod() {
-        return cod;
+    public int getid_dpto() {
+        return id_dpto;
     }
 
-    public void setCod(int cod) {
-        this.cod = cod;
+    public void setid_dpto(int id_dpto) {
+        this.id_dpto = id_dpto;
     }
 
-    public int getNumDepto() {
-        return NumDepto;
+    public int getcodlav() {
+        return codlav;
     }
 
-    public void setNumDepto(int NumDepto) {
-        this.NumDepto = NumDepto;
+    public void setcodlav(int codlav) {
+        this.codlav = codlav;
     }
 
-    public String getNombreDueño() {
-        return NombreDueño;
+    public int getcodedi() {
+        return codedi;
     }
 
-    public void setNombreDueño(String NombreDueño) {
-        this.NombreDueño = NombreDueño;
+    public void setcodedi(int codedi) {
+        this.codedi = codedi;
     }
     
+    public int getn_dpto() {
+        return n_dpto;
+    }
+
+    public void setn_dpto(int n_dpto) {
+        this.n_dpto = n_dpto;
+    }
+
+    
+
+
     
     
 }

@@ -16,22 +16,23 @@ import negocio.Departamento;
  */
 public class bddepartamento {
     
-    //traemos la coneccion ya instanciada en conector 
+    
     Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
-   //se crea un metodo llamado generar pagos
+   
     public boolean CrearDepto(Departamento dep){
-     //se establese la coneccion con la base de datos
-        conn = Conector.conectorBd();
-     //desmembramos la clase pago y los pasamos de String a integer con parse int
-     int cod = dep.getCod();
-     int NumDepto=dep.getNumDepto();
-     String NombreDueño=(dep.getNombreDueño());
      
-     //se hace la query para la base de datos
-     String sql ="insert into pago values("+id+",'"+fecha+"',"+Departamento+",'si',"+monto+")";
-     //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos   
+        conn = Conector.conectorBd();
+    int codlav   = dep.getcodlav();
+    int codedi   = dep.getcodedi();
+    int id_dpto   = dep.getid_dpto();
+    int n_dpto = dep.getn_dpto();
+     
+     
+     
+     String sql ="insert into pago values("+id_dpto+","+codlav+","+codedi+","+n_dpto+")";
+       
      try{
          JOptionPane.showMessageDialog(null, sql);
          pst = conn.prepareStatement(sql);

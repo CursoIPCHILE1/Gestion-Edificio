@@ -93,9 +93,9 @@ public class Inicio extends javax.swing.JFrame {
         
         Usuario u = new Usuario();
         u.setUsuario(usuario);
-        u.setPass(pass);
+        u.setPassword(Integer.parseInt(pass));
         
-        if(u.validar(u)){
+        if(u.valida(u)){
             JOptionPane.showMessageDialog(this, "El usuario Existe");
         }else{
             JOptionPane.showMessageDialog(this, "El usuario NO Existe");
