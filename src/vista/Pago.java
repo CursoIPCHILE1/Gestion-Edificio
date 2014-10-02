@@ -4,10 +4,10 @@
  */
 package vista;
 
-import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import javax.swing.JOptionPane;
-import negocio.*;
+
 
 /**
  *
@@ -38,14 +38,12 @@ public class Pago extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         idpago = new javax.swing.JTextField();
         montoapagar = new javax.swing.JTextField();
-        dia = new javax.swing.JTextField();
         pagonumdepto = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        mes = new javax.swing.JTextField();
-        año = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        Date = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,21 +92,13 @@ public class Pago extends javax.swing.JFrame {
                     .addComponent(montoapagar, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(idpago, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jLabel7)
-                                .addGap(36, 36, 36)
-                                .addComponent(jLabel8))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(año, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(pagonumdepto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6)
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel7)
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel8))
+                    .addComponent(pagonumdepto, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -131,10 +121,8 @@ public class Pago extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(año, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pagonumdepto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -151,17 +139,17 @@ public class Pago extends javax.swing.JFrame {
  
         Date date = new Date();
         
-        date.setDate(Integer.parseInt(dia.getText()));
-        date.setMonth(Integer.parseInt(mes.getText()));
-        date.setYear(Integer.parseInt(año.getText()));
+        date.setDate(Integer.parseInt(Date.getText()));
+        date.setMonth(Integer.parseInt(Date.getText()));
+        date.setYear(Integer.parseInt(Date.getText()));
 
 
         negocio.Pago pag = new negocio.Pago();
         pag.setId(Integer.parseInt(idpago.getText()));
         pag.setMonto(Integer.parseInt(montoapagar.getText()));
         pag.setFechapago(date);
-        negocio.Departamento depto = new negocio.Departamento();
-        pag.setPago(depto);
+        
+        pag.setNdepto(Integer.parseInt(pagonumdepto.getText()));
         
         
         if (pag.GenerarPagos(pag)) {
@@ -212,8 +200,7 @@ public class Pago extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField año;
-    private javax.swing.JTextField dia;
+    private javax.swing.JTextField Date;
     private javax.swing.JTextField idpago;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -224,7 +211,6 @@ public class Pago extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField mes;
     private javax.swing.JTextField montoapagar;
     private javax.swing.JTextField pagonumdepto;
     // End of variables declaration//GEN-END:variables

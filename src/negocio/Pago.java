@@ -15,7 +15,7 @@ public class Pago {
     public int id;
     public int monto;
     public Date fechapago;
-    public Departamento pago;
+    public int Ndepto;
 
     public Pago() {
     }
@@ -31,12 +31,7 @@ public class Pago {
          
     }
 
-    public Pago(int id, int monto, Date fechapago, Departamento pago) {
-        this.id = id;
-        this.monto = monto;
-        this.fechapago = fechapago;
-        this.pago = pago;
-    }
+    
 
     public int getId() {
         return id;
@@ -62,12 +57,12 @@ public class Pago {
         this.fechapago = fechapago;
     }
 
-    public Departamento getPago() {
-        return pago;
+    public int getNdepto() {
+        return Ndepto;
     }
 
-    public void setPago(Departamento pago) {
-        this.pago = pago;
+    public void setNdepto(int Ndepto) {
+        this.Ndepto = Ndepto;
     }
     
     
