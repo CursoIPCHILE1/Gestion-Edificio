@@ -27,22 +27,21 @@ public class GastosComunes {
     }
 
     public int CalcularGastosComunes(){
-        int calculargastoscomunes = codcant;
+        int calculargastoscomunes = Sumargastoscomunes()/codcant.getNumPiso(); 
         return calculargastoscomunes;
     }
     
-   
    public int Sumargastoscomunes(){
     int sumagastocomun =  luz+  agua+  gas+ aseo+  administracion+ contingencia;
        return sumagastocomun;
        
    }
    public String Informe(){
-       String informe;
-       return null;
-  
-   }
-    
+       String info = "select cod, fecha, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
+       return info;
+   }   
+   
+   
     /**
      * @return the cod
      */
@@ -74,15 +73,15 @@ public class GastosComunes {
     /**
      * @return the coddepto
      */
-    public Departamento getCoddepto() {
-        return coddepto;
+    public Edificio getCodcant() {
+        return codcant;
     }
 
     /**
      * @param coddepto the coddepto to set
      */
-    public void setCoddepto(Departamento coddepto) {
-        this.coddepto = coddepto;
+    public void setCodcant(Edificio codcant) {
+        this.codcant = codcant;
     }
 
     /**
