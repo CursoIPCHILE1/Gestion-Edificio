@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package negocio;
-
+import datos.*;
 /**
  *
  * @author Arturoandres
@@ -17,16 +17,16 @@ public class Departamento {
     public Departamento() {
     }
     
-    public String CrearDepto() {
-        String depto=null;
-        return depto;
+    public boolean CrearDepto(Departamento genera) {
+       bddepartamento bddep = new bddepartamento();
+       if(bddep.CrearDepto(genera)){
+        return true;
+        }else{
+        return false;
+        }
     }
 
-    public Departamento(int cod, int NumDepto, String NombreDueño) {
-        this.cod = cod;
-        this.NumDepto = NumDepto;
-        this.NombreDueño = NombreDueño;
-    }
+  
 
     public int getCod() {
         return cod;

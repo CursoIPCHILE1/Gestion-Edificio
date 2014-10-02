@@ -108,6 +108,8 @@ public class Departamento extends javax.swing.JFrame {
      dept.setCod(Integer.parseInt(txtcoddepto.getText()));
      dept.setNumDepto(Integer.parseInt(txtnumdepto.getText()));
      dept.setNombreDueño(txtduenodepto.getText());
+     
+     
     }//GEN-LAST:event_btgeneradeptoActionPerformed
 
     /**
