@@ -28,10 +28,10 @@ public class bddepartamento {
     int codedi   = dep.getcodedi();
     int id_dpto   = dep.getid_dpto();
     int n_dpto = dep.getn_dpto();
+     String dueno = dep.getDueno();
      
      
-     
-     String sql ="insert into pago values("+id_dpto+","+codlav+","+codedi+","+n_dpto+")";
+     String sql ="insert into Departamento values("+id_dpto+","+codlav+","+codedi+","+n_dpto+",'"+dueno+"')";
        
      try{
          JOptionPane.showMessageDialog(null, sql);
