@@ -13,8 +13,10 @@ public class Departamento {
     private int codlav;
     private int codedi;        
     private int n_dpto;
-  
+  private String dueno;
 
+   
+  
     public Departamento() {
     }
     
@@ -58,7 +60,13 @@ public class Departamento {
     public void setn_dpto(int n_dpto) {
         this.n_dpto = n_dpto;
     }
+ public String getDueno() {
+        return dueno;
+    }
 
+    public void setDueno(String dueño) {
+        this.dueno = dueño;
+    }
     
 
 
