@@ -19,7 +19,7 @@ public class bdUsuario {
     public Boolean valida(Usuario u){
      conn = Conector.conectorBd();
      
-     String us =u.getUsuario();
+    
      int pa =u.getPassword();
      int co =u.getCodigo();
      String di =u.getDireccion();
