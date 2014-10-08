@@ -19,7 +19,8 @@ public class bdUsuario {
     public Boolean valida(Usuario u){
      conn = Conector.conectorBd();
      
-    
+    String nom = u.getNombre();
+    String ape = u.getApellido();
      int pa =u.getPassword();
      int co =u.getCodigo();
      String di =u.getDireccion();
@@ -30,7 +31,7 @@ public class bdUsuario {
      String tur =u.getTurno();
      
      
-     String sql ="select * from usuario where nombre='" + us+"' and apellido='" + pa +"'";
+   String sql ="select * from usuario where nombre='" +nom' and apellido='" + ape";
         try{
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
