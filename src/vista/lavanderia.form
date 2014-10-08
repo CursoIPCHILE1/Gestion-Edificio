@@ -25,13 +25,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtficha" alignment="0" pref="67" max="32767" attributes="0"/>
-                      <Component id="txtvalor" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtcobro" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="txtcod_depto" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txtficha" alignment="0" pref="67" max="32767" attributes="0"/>
+                  <Component id="txtvalor" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtcobro" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="txtcod_depto" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -41,17 +39,15 @@
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbficha" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="lbcobro" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbvalor" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="lbcod_depto" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="lbficha" pref="65" max="32767" attributes="0"/>
+                          <Component id="lbcobro" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbcod_depto" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbvalor" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -82,9 +78,9 @@
                   <Component id="lbcobro" min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="txtcod_depto" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbcod_depto" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="lbcod_depto" min="-2" pref="14" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
@@ -194,7 +190,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="66" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cod.depto"/>
+        <Property name="text" type="java.lang.String" value="n&#xba; depto "/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
         </Property>
