@@ -92,7 +92,7 @@ public class Inicio extends javax.swing.JFrame {
         String pass = tf_pass.getText();
         
         Usuario u = new Usuario();
-        u.setUsuario(usuario);
+        u.setRut(Integer.parseInt(usuario));
         u.setPassword(Integer.parseInt(pass));
         
         if(u.valida(u)){

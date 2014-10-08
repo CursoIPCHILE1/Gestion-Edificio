@@ -64,8 +64,8 @@ public class Departamento {
         return dueno;
     }
 
-    public void setDueno(String dueño) {
-        this.dueno = dueño;
+    public void setDueno(String dueno) {
+        this.dueno = dueno;
     }
     
 

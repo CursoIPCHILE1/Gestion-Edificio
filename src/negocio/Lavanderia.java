@@ -3,7 +3,8 @@
  * and open the template in the editor.
  */
 package negocio;
-
+import datos.*;
+import java.util.ArrayList;
 /**
  *
  * @author Profesor
@@ -12,6 +13,13 @@ public class Lavanderia {
     
     private int cod;
 
+    
+    public ArrayList<String> listarDeptos(int codEdif){
+    
+        bdLavanderia lista = new bdLavanderia();
+        return lista.traerListaDeptos(codEdif);
+    }
+    
     public int getCobro() {
         return cobro;
     }
@@ -57,6 +65,8 @@ public class Lavanderia {
     }
     
     public Lavanderia (){}
+    
+    
     
     
 }

@@ -1,5 +1,7 @@
 package vista;
 
+import java.util.ArrayList;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -18,6 +20,8 @@ public class gastoscomunes extends javax.swing.JFrame {
         initComponents();
     }
 
+        
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

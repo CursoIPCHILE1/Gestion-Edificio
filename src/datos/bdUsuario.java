@@ -31,7 +31,7 @@ public class bdUsuario {
      String tur =u.getTurno();
      
      
-   String sql ="select * from usuario where nombre='" +nom' and apellido='" + ape";
+   String sql ="";
         try{
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
