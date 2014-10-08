@@ -12,10 +12,11 @@ import java.util.Date;
  */
 public class GastosComunes {
     
-    private int cod;
+    private int año;
+    private int mes;
     private Lavanderia cobro;
     private Edificio codcant;
-    private Date fecha;
+    
     private int luz;
     private int agua;
     private int gas;
@@ -37,39 +38,29 @@ public class GastosComunes {
        
    }
    public String Informe(){
-       String info = "select cod, fecha, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
+       String info = "select año, mes, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
        return info;
    }   
-   
    
     /**
      * @return the cod
      */
-    public int getCod() {
-        return cod;
-    }
-
-    /**
-     * @param cod the cod to set
-     */
-    public void setCod(int cod) {
-        this.cod = cod;
-    }
+    
+    
 
     /**
      * @return the cobro
      */
-    public Lavanderia getCobro() {
-        return cobro;
-    }
+   public int año() {
+       return año;
+   }
 
     /**
      * @param cobro the cobro to set
      */
-    public void setCobro(Lavanderia cobro) {
-        this.cobro = cobro;
-    }
-
+   public int mes(){
+       return mes;
+   }
     /**
      * @return the coddepto
      */
@@ -87,16 +78,7 @@ public class GastosComunes {
     /**
      * @return the fecha
      */
-    public Date getFecha() {
-        return fecha;
-    }
-
-    /**
-     * @param fecha the fecha to set
-     */
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
+   
 
     /**
      * @return the luz
