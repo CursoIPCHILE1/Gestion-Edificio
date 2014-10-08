@@ -19,6 +19,11 @@ public class Lavanderia {
         bdLavanderia lista = new bdLavanderia();
         return lista.traerListaDeptos(codEdif);
     }
+    public ArrayList<String> traerDeptos(int codEdif){
+    
+        bdLavanderia lista = new bdLavanderia();
+        return lista.traerListado(codEdif);
+    }
     
     public int getCobro() {
         return cobro;
