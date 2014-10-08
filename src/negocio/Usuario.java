@@ -10,7 +10,8 @@ import datos.bdUsuario;
  */
 public class Usuario {
     
-    private String usuario;
+    private String nombre;
+    private String apellido;
     private int password;
     private int codigo;
     private String direccion;
@@ -22,6 +23,22 @@ public class Usuario {
     private String turno;
     
     public Usuario(){}
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
 
     public int getPassword() {
         return password;
@@ -93,14 +110,6 @@ public class Usuario {
 
     public void setTurno(String turno) {
         this.turno = turno;
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
     }
 
     public int getPass() {
