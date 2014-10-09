@@ -42,15 +42,6 @@ public class GastosComunes {
        return info;
    }   
    
-    //public boolean Creargastocomun(gastoscomunes genera) {
-    //   bdgastoscomunes bdgc = new bdgastoscomunes();
-      // if(bdgc.Creargastocomun(genera)){
-      //  return true;
-      //  }else{
-      //  return false;
-      //  }
-    //}
-   
     /**
      * @return the cod
      */
