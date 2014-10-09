@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package negocio;
-
+import datos.*;
 import java.util.Date;
 
 /**
@@ -42,6 +42,15 @@ public class GastosComunes {
        return info;
    }   
    
+  // public boolean CrearGastosComunes(GastosComunes gastocomun) {
+    //   bdgastoscomunes bdgc =  new bdgastoscomunes;
+      // if(bdgc.Creargastocomun(gastocomun)){
+       // return true;
+       // }else{
+       // return false;
+      // }  
+  // }
+       
     /**
      * @return the cod
      */
