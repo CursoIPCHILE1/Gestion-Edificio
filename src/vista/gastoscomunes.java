@@ -1,7 +1,7 @@
 package vista;
 
-import java.util.ArrayList;
-
+import javax.swing.JOptionPane;
+import negocio.*;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -46,7 +46,7 @@ public class gastoscomunes extends javax.swing.JFrame {
         txtagua = new javax.swing.JTextField();
         txtadministracion = new javax.swing.JTextField();
         txtcontingencia = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        gastocomun = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         txttotalsueldo = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox();
@@ -70,12 +70,14 @@ public class gastoscomunes extends javax.swing.JFrame {
 
         jLabel10.setText("Contingencia");
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 1, 12)); // NOI18N
         jLabel11.setText("INGRESO GASTOS COMUNES");
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setText("Ingresar  Gastos comunes");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        gastocomun.setText("Ingresar  Gastos comunes");
+        gastocomun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                gastocomunActionPerformed(evt);
             }
         });
 
@@ -107,16 +109,15 @@ public class gastoscomunes extends javax.swing.JFrame {
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(37, 37, 37)
-                                                .addComponent(jLabel11))
-                                            .addComponent(txtluz, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(txtluz, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 129, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtgas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,7 +142,7 @@ public class gastoscomunes extends javax.swing.JFrame {
                         .addGap(74, 74, 74))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1)
+                            .addComponent(gastocomun)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(66, 66, 66)
@@ -182,16 +183,34 @@ public class gastoscomunes extends javax.swing.JFrame {
                     .addComponent(txtaseo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(34, 34, 34)
-                .addComponent(jButton1)
+                .addComponent(gastocomun)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void gastocomunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gastocomunActionPerformed
+        GastosComunes gastocomun = new GastosComunes();
+        
+     gastocomun.setAgua(Integer.parseInt(txtagua.getText()));
+     gastocomun.setLuz(Integer.parseInt(txtluz.getText()));
+     gastocomun.setGas(Integer.parseInt(txtgas.getText()));
+     gastocomun.setAdministracion(Integer.parseInt(txtadministracion.getText()));
+     gastocomun.setContingencia(Integer.parseInt(txtcontingencia.getText()));
+     
+     
+      //if (gastocomun.CalcularGastosComunes(gastocomun) {
+            
+        //    JOptionPane.showMessageDialog(this, "Gastos comunes Guardados");
+        
+      // }else   {
+            
+        //    JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados");
+       // }
+        
+        
+    }//GEN-LAST:event_gastocomunActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
@@ -232,7 +251,7 @@ public class gastoscomunes extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton gastocomun;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
