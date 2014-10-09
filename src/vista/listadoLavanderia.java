@@ -38,10 +38,15 @@ public class listadoLavanderia extends javax.swing.JFrame {
         modelo.setNumRows(listado.size());
         
         for (int i = 0; i < listado.size(); i++) {
-            modelo.setValueAt(listado.get(0), i, 0);
-            modelo.setValueAt(listado.get(1), i, 1);
-            modelo.setValueAt(listado.get(2), i, 2);
-           
+            modelo.setValueAt(listado.get(0), 0, 0);
+            modelo.setValueAt(listado.get(1), 0, 1);
+            modelo.setValueAt(listado.get(2), 0, 2);
+            modelo.setValueAt(listado.get(3), 1, 0);
+            modelo.setValueAt(listado.get(4), 1, 1);
+            modelo.setValueAt(listado.get(5), 1, 2);
+            //modelo.setValueAt(listado.get(1), i, 1);
+            //modelo.setValueAt(listado.get(2), i, 2);
+           System.out.println(listado.get(i));
         }
         this.listado.setModel(modelo);
         
