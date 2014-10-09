@@ -200,13 +200,13 @@ public class gastoscomunes extends javax.swing.JFrame {
      gastocomun.setContingencia(Integer.parseInt(txtcontingencia.getText()));
      
      
-      //if (gastocomun.CalcularGastosComunes(gastocomun) {
+      //if (gastocomun.CrearGastosComunes(gastocomun) {
             
         //    JOptionPane.showMessageDialog(this, "Gastos comunes Guardados");
         
-      // }else   {
+       //}else   {
             
-        //    JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados");
+         //   JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados");
        // }
         
         
