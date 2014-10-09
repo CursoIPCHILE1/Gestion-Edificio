@@ -104,6 +104,11 @@ public class lavanderia extends javax.swing.JFrame {
         });
 
         codEdificio.setText("1");
+        codEdificio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codEdificioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,6 +186,10 @@ public class lavanderia extends javax.swing.JFrame {
     private void txtcod_deptoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcod_deptoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtcod_deptoActionPerformed
+
+    private void codEdificioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codEdificioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codEdificioActionPerformed
 
     /**
      * @param args the command line arguments

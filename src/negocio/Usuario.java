@@ -3,7 +3,9 @@
  * and open the template in the editor.
  */
 package negocio;
+import datos.bdLavanderia;
 import datos.bdUsuario;
+import java.util.ArrayList;
 /**
  *
  * @author Profesor
@@ -20,7 +22,7 @@ public class Usuario {
     private Perfil tipoUsuario;
     private int rut;
     private String horario;
-    private String turno;
+ 
     
     public Usuario(){}
 
@@ -104,14 +106,6 @@ public class Usuario {
         this.horario = horario;
     }
 
-    public String getTurno() {
-        return turno;
-    }
-
-    public void setTurno(String turno) {
-        this.turno = turno;
-    }
-
     public int getPass() {
         return password;
     }
@@ -130,6 +124,18 @@ public class Usuario {
             return false;
         }
     }
+    
+    public ArrayList<String> listarCargos(){
+    
+        bdUsuario lista = new bdUsuario();
+        return lista.traerListaCargos();
+    }
+    public ArrayList<String> listarHorarios(){
+    
+        bdUsuario lista = new bdUsuario();
+        return lista.traerListaHorarios();
+    }
+    
      public Boolean crearUsuario(Usuario usu){
          return null;
      }   
