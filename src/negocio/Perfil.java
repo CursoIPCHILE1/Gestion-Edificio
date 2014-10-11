@@ -23,14 +23,7 @@ public class Perfil {
         String Perfil=null;
         return Perfil;
     }
-   
-  public Perfil(int cod, String descripcion, int sueldo, String turno) {
-        
-    this.cod = cod;
-    this.descripcion = descripcion;
-    this.sueldo = sueldo;
-    this.turno = turno;
-}
+
 
     public int getCod() {
         return cod;
