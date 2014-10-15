@@ -75,32 +75,32 @@ int su           = per.getSueldo();
 
      }
 
-     CREATE OR REPLACE FUNCTION tu_asignar (int, int) RETURNS setof perfil AS $BODY$
+    // CREATE OR REPLACE FUNCTION tu_asignar (int, int) RETURNS setof perfil AS $BODY$
              
-             DECLARE 
- perfil% ROWTYPE; -- ver turnos 
+            // DECLARE 
+// perfil% ROWTYPE; -- ver turnos 
 
-              BEGIN 
+             // BEGIN 
 
-                  for r in select * from perfil where tUrno=$1 and cod = $2 loop 
-    return next tu;
-   end loop;
+                 // for r in select * from perfil where tUrno=$1 and cod = $2 loop 
+   // return next tu;
+  // end loop;
 
-END;
+//END;
 
 $BODY$
- language plpgsql;
+// language plpgsql;
 
-select tu_asignar(cod)
+//select tu_asignar(cod)
 
-String sql = "Select tu_asignar(?,?)";
-try{
+//String sql = "Select tu_asignar(?,?)";
+//try{
 
-pat = conn.prepareStatement (sql);
-pst = setint (1,cod);
-pst.= setint (2, tu);
-rs = pat. executeQuery();
-if = (rs.next ()){
+//pat = conn.prepareStatement (sql);
+//pst = setint (1,cod);
+//pst.= setint (2, tu);
+//rs = pat. executeQuery();
+//if = (rs.next ()){
 
 
         
