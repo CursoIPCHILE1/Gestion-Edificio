@@ -106,7 +106,10 @@ public class administracion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnpagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpagosActionPerformed
-        // TODO add your handling code here:
+       Pago pagosgast = new Pago();
+            pagosgast.setVisible(true);
+            administracion.this.dispose();
+            
     }//GEN-LAST:event_btnpagosActionPerformed
 
     private void btngastocomunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngastocomunActionPerformed

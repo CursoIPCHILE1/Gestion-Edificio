@@ -5,6 +5,7 @@
 package datos;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Profesor
@@ -13,6 +14,7 @@ import java.sql.*;
 public class Conector {
     
     Connection conn = null;
+    
 //arturo :se establese la coneccion
     public static Connection conectorBd(){
         
@@ -25,6 +27,7 @@ public class Conector {
             String password= "1234";
             Connection conn = DriverManager.getConnection(url, usuario, password);
           //se retorna conn como la coneccion
+            JOptionPane.showMessageDialog(null," ok");
             return conn;
         
         // si no hay movimiento de datos se hace la exepcion cpn el catch para no retornar nada
