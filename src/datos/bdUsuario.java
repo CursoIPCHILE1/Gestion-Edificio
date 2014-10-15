@@ -46,14 +46,43 @@ public class bdUsuario {
            return false;
             
             }
+           
             
         }catch(Exception e){
             return false;
         }
        
     }
+    String sql ="update pa_actualizarUsuario set (nom,ape,pa,co,di,fo,car,ru,ho) where (unom,uape,upa,uco,udi,ufo,ucar,uru,uho)";
+        try{
+                    
+            rs = pst.executeQuery();
+                    return true;
+                
+            }else {
+           return false;
+                  
+        }catch(Exception e){
+            return false;
+}
+
+        String sql ="delete from pa_eliminarUsuario where rut=urut and pa=upa";
+        try{
+            
+            
+            rs = pst.executeQuery();
+                    return true;
+                
+            }else {
+           return false;
+                  
+        }catch(Exception e){
+            return false;
+}
+       
+           
+            
     
-  
   
     public ArrayList<String> traerListaCargos(){
     conn = Conector.conectorBd();  
@@ -61,7 +90,7 @@ public class bdUsuario {
         try {
             pst = conn.prepareStatement(sql);
             
-            ArrayList<String> ls = new ArrayList<String>();
+            ArrayList<String> ls = new ArrayList<>();
             
             rs = pst.executeQuery();
             while(rs.next()){
