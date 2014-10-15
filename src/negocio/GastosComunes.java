@@ -12,6 +12,7 @@ import java.util.Date;
  */
 public class GastosComunes {
     
+    
     private int ano;
     private int mes;
    // private Lavanderia cobro;

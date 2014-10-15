@@ -35,7 +35,7 @@ public class bdgastoscomunes {
         //String sql ="insert into GastosComunes values("+Agua+","+Luz+","+Gas+","+Administracion+","+Aseo+","+Contingencia+")";
         //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos  
         
-        String sql ="select pa_CrearGastosComunes(?,?,?,?,?,?,?,?)";
+        String sql ="insert into pa_CrearGastosComunes values(?,?,?,?,?,?,?,?)";
          try{
             pst = conn.prepareStatement(sql);
             pst.setInt(1, Ano);
@@ -60,6 +60,7 @@ public class bdgastoscomunes {
         }
     }
 }
+
         
     
        

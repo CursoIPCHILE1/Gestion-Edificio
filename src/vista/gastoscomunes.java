@@ -209,7 +209,7 @@ public class gastoscomunes extends javax.swing.JFrame {
      if(g.CrearGastosComunes(g)){
            JOptionPane.showMessageDialog(this, "Gastos comunes Guardados se ingresaron correctamente");
            administracion admin = new administracion();
-            admin.setVisible(true);
+           admin.setVisible(true);
            gastoscomunes.this.dispose();
            
        }else{
