@@ -8,6 +8,7 @@ package datos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import negocio.Departamento;
 import negocio.Perfil;
@@ -26,33 +27,94 @@ public class bdPerfil {
     public boolean asignarTurno(Perfil per){
      
         conn = Conector.conectorBd();
-    int cod              = per.getCod();
-    String descripcion   = per.getDescripcion();
-    String turno         = per.getTurno();
-    int sueldo           = per.getSueldo();
+    
+int cod              = per.getCod();
+String de        = per.getDescripcion();
+String tu        = per.getTurno();
+int su           = per.getSueldo();
      
      
-     String sql ="insert into Departamento values("+cod+","+descripcion+","+turno+","+sueldo+")";
-       
-     try{
-         JOptionPane.showMessageDialog(null, sql);
-         pst = conn.prepareStatement(sql);
-            pst.execute();
-            
-            return true;
-          /*  if(pst.execute()){
-                
+     String sql ="insert into Perfil values("+cod+","+tu+")";
+       try{
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            if(rs.next()){
                return true;
                 
             }else {
            return false;
             
-            }*/
+            }
             
         }catch(Exception e){
-           
             return false;
         }
-    
+       
     }
-}
+    
+     public ArrayList<String> traerListaCargos(){
+    conn = Conector.conectorBd();  
+    String sql = "select descripcion from usuario";           
+        try {
+            pst = conn.prepareStatement(sql);
+            
+            ArrayList<String> ls = new ArrayList<String>();
+            
+            rs = pst.executeQuery();
+            while(rs.next()){
+            
+                ls.add(rs.getString("descripcion"));
+            }
+            return ls;
+            
+        } catch (Exception e) {
+            return null;
+        }
+        
+        
+
+     }
+
+     CREATE OR REPLACE FUNCTION tu_asignar (int, int) RETURNS setof perfil AS $BODY$
+             
+             DECLARE 
+ perfil% ROWTYPE; -- ver turnos 
+
+              BEGIN 
+
+                  for r in select * from perfil where tUrno=$1 and cod = $2 loop 
+    return next tu;
+   end loop;
+
+END;
+
+$BODY$
+ language plpgsql;
+
+select tu_asignar(cod)
+
+String sql = "Select tu_asignar(?,?)";
+try{
+
+pat = conn.prepareStatement (sql);
+pst = setint (1,cod);
+pst.= setint (2, tu);
+rs = pat. executeQuery();
+if = (rs.next ()){
+
+
+        
+    
+    
+
+     
+    
+
+       
+              
+      
+              
+              
+     
+    
+         
