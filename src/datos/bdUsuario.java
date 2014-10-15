@@ -53,31 +53,31 @@ public class bdUsuario {
         }
        
     }
-    String sql ="update pa_actualizarUsuario set (nom,ape,pa,co,di,fo,car,ru,ho) where (unom,uape,upa,uco,udi,ufo,ucar,uru,uho)";
-        try{
+    //String sql ="update pa_actualizarUsuario set (nom,ape,pa,co,di,fo,car,ru,ho) where (unom,uape,upa,uco,udi,ufo,ucar,uru,uho)";
+        //try{
                     
-            rs = pst.executeQuery();
-                    return true;
+            //rs = pst.executeQuery();
+                    //return true;
                 
-            }else {
-           return false;
+            //}else {
+           //return false;
                   
-        }catch(Exception e){
-            return false;
+        //}catch(Exception e){
+           // return false;
 }
 
-        String sql ="delete from pa_eliminarUsuario where rut=urut and pa=upa";
-        try{
+       // String sql ="delete from pa_eliminarUsuario where rut=urut and pa=upa";
+        //try{
             
             
-            rs = pst.executeQuery();
-                    return true;
+           // rs = pst.executeQuery();
+                   // return true;
                 
-            }else {
-           return false;
+           // }else {
+          // return false;
                   
-        }catch(Exception e){
-            return false;
+        //}catch(Exception e){
+            //return false;
 }
        
            
