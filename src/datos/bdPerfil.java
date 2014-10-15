@@ -71,6 +71,7 @@ int su           = per.getSueldo();
             return null;
         }
         
+<<<<<<< HEAD
      }
 }
 
@@ -90,6 +91,26 @@ int su           = per.getSueldo();
 //END;
 
 //$BODY$
+=======
+        
+
+     }
+
+    // CREATE OR REPLACE FUNCTION tu_asignar (int, int) RETURNS setof perfil AS $BODY$
+             
+            // DECLARE 
+// perfil% ROWTYPE; -- ver turnos 
+
+             // BEGIN 
+
+                 // for r in select * from perfil where tUrno=$1 and cod = $2 loop 
+   // return next tu;
+  // end loop;
+
+//END;
+
+$BODY$
+>>>>>>> branch 'master' of https://github.com/CursoIPCHILE1/Gestion-Edificio.git
 // language plpgsql;
 
 //select tu_asignar(cod)

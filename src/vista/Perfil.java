@@ -302,4 +302,7 @@ public class Perfil extends javax.swing.JFrame {
 
 
 
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/CursoIPCHILE1/Gestion-Edificio.git
+=======
 >>>>>>> branch 'master' of https://github.com/CursoIPCHILE1/Gestion-Edificio.git
