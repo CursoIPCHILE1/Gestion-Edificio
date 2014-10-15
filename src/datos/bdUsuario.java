@@ -64,7 +64,7 @@ public class bdUsuario {
                   
         //}catch(Exception e){
            // return false;
-}
+//}
 
        // String sql ="delete from pa_eliminarUsuario where rut=urut and pa=upa";
         //try{
@@ -78,7 +78,7 @@ public class bdUsuario {
                   
         //}catch(Exception e){
             //return false;
-}
+//}
        
            
             
