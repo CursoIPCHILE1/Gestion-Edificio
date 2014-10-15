@@ -53,7 +53,7 @@ public class bdUsuario {
         }
        
     }
-    //String sql ="update pa_actualizarUsuario set (nom,ape,pa,co,di,fo,car,ru,ho) where (unom,uape,upa,uco,udi,ufo,ucar,uru,uho)";
+    String sql ="update pa_actualizarUsuario set (nom,ape,pa,co,di,fo,car,ru,ho) where (unom,uape,upa,uco,udi,ufo,ucar,uru,uho)";
         //try{
                     
             //rs = pst.executeQuery();
