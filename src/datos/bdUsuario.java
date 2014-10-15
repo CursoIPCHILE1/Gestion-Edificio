@@ -32,12 +32,15 @@ public class bdUsuario {
      
      
      
-   String sql ="select * from Usuario where rut= ("+nom+", "+ape+")";
+   //String sql ="select * from Usuario where rut="+ru+" and password="+pa+";";
+  String sql ="select pa_validar(?,?)";
         try{
             pst = conn.prepareStatement(sql);
+            pst.setInt(1, ru);
+            pst.setInt(2, pa);
             rs = pst.executeQuery();
             if(rs.next()){
-               return true;
+                                 return true;
                 
             }else {
            return false;
