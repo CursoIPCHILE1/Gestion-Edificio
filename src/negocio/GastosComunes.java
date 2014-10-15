@@ -17,7 +17,6 @@ public class GastosComunes {
     private int mes;
    // private Lavanderia cobro;
     private Edificio codcant;
-    
     private int luz;
     private int agua;
     private int gas;
@@ -39,7 +38,7 @@ public class GastosComunes {
        
    }
    public String Informe(){
-       String info = "select año, mes, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
+       String info = "select ano, mes, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
        return info;
    }   
    
