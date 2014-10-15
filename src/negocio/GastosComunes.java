@@ -61,14 +61,14 @@ public class GastosComunes {
      * @return the cobro
      */
    public int año() {
-       return año;
+       return getAño();
    }
 
     /**
      * @param cobro the cobro to set
      */
    public int mes(){
-       return mes;
+       return getMes();
    }
     /**
      * @return the coddepto
@@ -171,6 +171,38 @@ public class GastosComunes {
      */
     public void setContingencia(int contingencia) {
         this.contingencia = contingencia;
+    }
+
+    public boolean CrearGastosComunes(GastosComunes g) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /**
+     * @return the año
+     */
+    public int getAño() {
+        return año;
+    }
+
+    /**
+     * @param año the año to set
+     */
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    /**
+     * @return the mes
+     */
+    public int getMes() {
+        return mes;
+    }
+
+    /**
+     * @param mes the mes to set
+     */
+    public void setMes(int mes) {
+        this.mes = mes;
     }
     
     

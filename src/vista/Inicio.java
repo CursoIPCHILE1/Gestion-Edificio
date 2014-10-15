@@ -97,6 +97,10 @@ public class Inicio extends javax.swing.JFrame {
         
         if(u.valida(u)){
             JOptionPane.showMessageDialog(this, "El usuario Existe");
+            administracion admin = new administracion();
+            admin.setVisible(true);
+            Inicio.this.dispose();
+            
         }else{
             JOptionPane.showMessageDialog(this, "El usuario NO Existe");
         }
