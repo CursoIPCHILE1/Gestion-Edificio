@@ -61,10 +61,6 @@ public class bdgastoscomunes {
     }
 }
 
-        
-    
-       
-    
         //try{
          //JOptionPane.showMessageDialog(null, sql);
         // pst = conn.prepareStatement(sql);
