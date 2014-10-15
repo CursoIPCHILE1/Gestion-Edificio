@@ -191,7 +191,10 @@ public class gastoscomunes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void gastocomunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gastocomunActionPerformed
+        
+        
         GastosComunes gastocomun = new GastosComunes();
+        
         
      gastocomun.setAgua(Integer.parseInt(txtagua.getText()));
      gastocomun.setLuz(Integer.parseInt(txtluz.getText()));
@@ -199,17 +202,17 @@ public class gastoscomunes extends javax.swing.JFrame {
      gastocomun.setAdministracion(Integer.parseInt(txtadministracion.getText()));
      gastocomun.setContingencia(Integer.parseInt(txtcontingencia.getText()));
      
-     
-      //if (gastocomun.CrearGastosComunes(gastocomun) {
+    // if(gastocomun.CrearGastosComunes(gastocomun)){
+       //     JOptionPane.showMessageDialog(this, "Gastos comunes Guardados se ingresaron correctamente");
+      //      administracion admin = new administracion();
+       //     admin.setVisible(true);
+        //    gastoscomunes.this.dispose();
             
-        //    JOptionPane.showMessageDialog(this, "Gastos comunes Guardados");
-        
-       //}else   {
-            
-         //   JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados");
-       // }
-        
-        
+     //   }else{
+      //      JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados tuvieron problemas de ingreso");
+      //  }
+    
+       
     }//GEN-LAST:event_gastocomunActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
