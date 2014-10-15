@@ -49,8 +49,8 @@ public class gastoscomunes extends javax.swing.JFrame {
         gastocomun = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         txttotalsueldo = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
+        txtmes = new javax.swing.JComboBox();
+        txtano = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,16 +83,16 @@ public class gastoscomunes extends javax.swing.JFrame {
 
         jLabel12.setText("Total sueldo");
 
-        jComboBox1.setMaximumRowCount(12);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "novembre", "dicembre" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        txtmes.setMaximumRowCount(12);
+        txtmes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        txtmes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                txtmesActionPerformed(evt);
             }
         });
 
-        jComboBox2.setMaximumRowCount(2);
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015" }));
+        txtano.setMaximumRowCount(2);
+        txtano.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,30 +123,32 @@ public class gastoscomunes extends javax.swing.JFrame {
                                             .addComponent(txtgas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txtaseo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel12)
-                                            .addComponent(jLabel10))))
+                                        .addComponent(jLabel10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                                 .addComponent(txtcontingencia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtadministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txttotalsueldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(txtagua, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(1, 1, 1)))
+                                .addComponent(txtmes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(47, 47, 47)
+                                        .addComponent(txtagua, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel8)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(1, 1, 1)
+                                                .addComponent(jLabel12)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtadministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txttotalsueldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addGap(74, 74, 74))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(gastocomun)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(jLabel6)))
+                            .addComponent(txtano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -157,11 +159,11 @@ public class gastoscomunes extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtmes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(txtagua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
@@ -191,30 +193,35 @@ public class gastoscomunes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void gastocomunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gastocomunActionPerformed
-        GastosComunes gastocomun = new GastosComunes();
         
-     gastocomun.setAgua(Integer.parseInt(txtagua.getText()));
-     gastocomun.setLuz(Integer.parseInt(txtluz.getText()));
-     gastocomun.setGas(Integer.parseInt(txtgas.getText()));
-     gastocomun.setAdministracion(Integer.parseInt(txtadministracion.getText()));
-     gastocomun.setContingencia(Integer.parseInt(txtcontingencia.getText()));
+        
+        GastosComunes g = new GastosComunes();
+        
+     int mes= Integer.parseInt(txtmes.getSelectedItem().toString());
+     int ano= Integer.parseInt(txtano.getSelectedItem().toString());
+     g.setAgua(Integer.parseInt(txtagua.getText()));
+     g.setLuz(Integer.parseInt(txtluz.getText()));
+     g.setGas(Integer.parseInt(txtgas.getText()));
+     g.setAdministracion(Integer.parseInt(txtadministracion.getText()));
+     g.setAseo(Integer.parseInt(txtaseo.getText()));
+     g.setContingencia(Integer.parseInt(txtcontingencia.getText()));
      
-     
-      //if (gastocomun.CrearGastosComunes(gastocomun) {
-            
-        //    JOptionPane.showMessageDialog(this, "Gastos comunes Guardados");
-        
-       //}else   {
-            
-         //   JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados");
-       // }
-        
-        
+     if(g.CrearGastosComunes(g)){
+           JOptionPane.showMessageDialog(this, "Gastos comunes Guardados se ingresaron correctamente");
+           administracion admin = new administracion();
+            admin.setVisible(true);
+           gastoscomunes.this.dispose();
+           
+       }else{
+            JOptionPane.showMessageDialog(this, "Gastos comunes No Guardados tuvieron problemas de ingreso");
+        }
+    
+       
     }//GEN-LAST:event_gastocomunActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void txtmesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_txtmesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,8 +259,6 @@ public class gastoscomunes extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton gastocomun;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -266,10 +271,12 @@ public class gastoscomunes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtadministracion;
     private javax.swing.JTextField txtagua;
+    private javax.swing.JComboBox txtano;
     private javax.swing.JTextField txtaseo;
     private javax.swing.JTextField txtcontingencia;
     private javax.swing.JTextField txtgas;
     private javax.swing.JTextField txtluz;
+    private javax.swing.JComboBox txtmes;
     private javax.swing.JTextField txttotalsueldo;
     // End of variables declaration//GEN-END:variables
 }

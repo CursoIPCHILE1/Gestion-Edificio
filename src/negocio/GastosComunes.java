@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class GastosComunes {
     
-    private int año;
+    private int ano;
     private int mes;
    // private Lavanderia cobro;
     private Edificio codcant;
@@ -60,15 +60,15 @@ public class GastosComunes {
     /**
      * @return the cobro
      */
-   public int año() {
-       return año;
+   public int ano() {
+       return getAno();
    }
 
     /**
      * @param cobro the cobro to set
      */
    public int mes(){
-       return mes;
+       return getMes();
    }
     /**
      * @return the coddepto
@@ -171,6 +171,48 @@ public class GastosComunes {
      */
     public void setContingencia(int contingencia) {
         this.contingencia = contingencia;
+    }
+
+    public boolean CrearGastosComunes(GastosComunes g) {
+       
+    
+        bdgastoscomunes ga = new bdgastoscomunes();
+        
+        if(ga.CrearGastosComunes(g)){
+            return true;
+        }else{
+            return false;
+        }
+    
+        //To change body of generated methods, choose Tools | Templates.
+    }
+
+    /**
+     * @return the año
+     */
+    public int getAno() {
+        return ano;
+    }
+
+    /**
+     * @param año the año to set
+     */
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    /**
+     * @return the mes
+     */
+    public int getMes() {
+        return mes;
+    }
+
+    /**
+     * @param mes the mes to set
+     */
+    public void setMes(int mes) {
+        this.mes = mes;
     }
     
     
