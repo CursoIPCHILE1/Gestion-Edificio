@@ -23,7 +23,7 @@ public class bdgastoscomunes {
     public boolean CrearGastosComunes(GastosComunes g) {
         
             conn = Conector.conectorBd();
-        int Año = g.getAño();
+        int Ano = g.getAno();
         int Mes = g.getMes();
         int Agua = g.getAgua();
         int Luz = g.getLuz();
@@ -35,10 +35,10 @@ public class bdgastoscomunes {
         //String sql ="insert into GastosComunes values("+Agua+","+Luz+","+Gas+","+Administracion+","+Aseo+","+Contingencia+")";
         //se crea la condicion de try y catch para saber si se tiene acceso o no a la base de datos  
         
-        String sql ="select pa_CreargastosComunes(?,?,?,?,?,?,?,?)";
+        String sql ="select pa_CrearGastosComunes(?,?,?,?,?,?,?,?)";
          try{
             pst = conn.prepareStatement(sql);
-            pst.setInt(1, Año);
+            pst.setInt(1, Ano);
             pst.setInt(2, Mes);
             pst.setInt(3, Agua);
             pst.setInt(4, Luz);
@@ -46,8 +46,8 @@ public class bdgastoscomunes {
             pst.setInt(6, Administracion);
             pst.setInt(7, Aseo);
             pst.setInt(8, Contingencia);
-            rs = pst.executeQuery();
-            if(rs.next()){
+            
+            if(pst.execute()){
                     return true;
                 
             }else {

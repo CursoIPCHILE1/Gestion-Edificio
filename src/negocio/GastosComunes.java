@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class GastosComunes {
     
-    private int año;
+    private int ano;
     private int mes;
    // private Lavanderia cobro;
     private Edificio codcant;
@@ -60,8 +60,8 @@ public class GastosComunes {
     /**
      * @return the cobro
      */
-   public int año() {
-       return getAño();
+   public int ano() {
+       return getAno();
    }
 
     /**
@@ -174,21 +174,31 @@ public class GastosComunes {
     }
 
     public boolean CrearGastosComunes(GastosComunes g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
+    
+        bdgastoscomunes ga = new bdgastoscomunes();
+        
+        if(ga.CrearGastosComunes(g)){
+            return true;
+        }else{
+            return false;
+        }
+    
+        //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
      * @return the año
      */
-    public int getAño() {
-        return año;
+    public int getAno() {
+        return ano;
     }
 
     /**
      * @param año the año to set
      */
-    public void setAño(int año) {
-        this.año = año;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     /**

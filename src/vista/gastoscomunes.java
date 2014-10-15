@@ -50,7 +50,7 @@ public class gastoscomunes extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         txttotalsueldo = new javax.swing.JTextField();
         txtmes = new javax.swing.JComboBox();
-        txtaño = new javax.swing.JComboBox();
+        txtano = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,15 +84,15 @@ public class gastoscomunes extends javax.swing.JFrame {
         jLabel12.setText("Total sueldo");
 
         txtmes.setMaximumRowCount(12);
-        txtmes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "novembre", "dicembre" }));
+        txtmes.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         txtmes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtmesActionPerformed(evt);
             }
         });
 
-        txtaño.setMaximumRowCount(2);
-        txtaño.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015" }));
+        txtano.setMaximumRowCount(2);
+        txtano.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -148,7 +148,7 @@ public class gastoscomunes extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(gastocomun)
-                            .addComponent(txtaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -163,7 +163,7 @@ public class gastoscomunes extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtaño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
                     .addComponent(txtagua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
@@ -198,11 +198,12 @@ public class gastoscomunes extends javax.swing.JFrame {
         GastosComunes g = new GastosComunes();
         
      int mes= Integer.parseInt(txtmes.getSelectedItem().toString());
-     int año= Integer.parseInt(txtaño.getSelectedItem().toString());
+     int ano= Integer.parseInt(txtano.getSelectedItem().toString());
      g.setAgua(Integer.parseInt(txtagua.getText()));
      g.setLuz(Integer.parseInt(txtluz.getText()));
      g.setGas(Integer.parseInt(txtgas.getText()));
      g.setAdministracion(Integer.parseInt(txtadministracion.getText()));
+     g.setAseo(Integer.parseInt(txtaseo.getText()));
      g.setContingencia(Integer.parseInt(txtcontingencia.getText()));
      
      if(g.CrearGastosComunes(g)){
@@ -270,8 +271,8 @@ public class gastoscomunes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtadministracion;
     private javax.swing.JTextField txtagua;
+    private javax.swing.JComboBox txtano;
     private javax.swing.JTextField txtaseo;
-    private javax.swing.JComboBox txtaño;
     private javax.swing.JTextField txtcontingencia;
     private javax.swing.JTextField txtgas;
     private javax.swing.JTextField txtluz;
