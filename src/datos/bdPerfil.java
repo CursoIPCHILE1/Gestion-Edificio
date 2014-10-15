@@ -110,6 +110,10 @@ int su           = per.getSueldo();
 //END;
 
 
+<<<<<<< HEAD
+=======
+// language plpgsql;
+>>>>>>> 63a88de2e705bd0d30028df58e840504dfb302f2
 
 //select tu_asignar(cod)
 
