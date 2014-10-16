@@ -243,6 +243,8 @@ public class usuario extends javax.swing.JFrame {
     private void AceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AceptarActionPerformed
         // TODO add your handling code here:
         
+        String nom= txtnombre.getText();
+        String ape= txtapellido.getText();
         
     }//GEN-LAST:event_AceptarActionPerformed
 
