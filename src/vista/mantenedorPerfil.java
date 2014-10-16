@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package vista;
-
+import negocio.*;
 /**
  *
  * @author Laboratorio
@@ -57,6 +57,11 @@ public class mantenedorPerfil extends javax.swing.JFrame {
         jLabel4.setText("Mantenedor Perfil");
 
         btn_crear.setText("Crear");
+        btn_crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crearActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -150,6 +155,20 @@ public class mantenedorPerfil extends javax.swing.JFrame {
     private void txtdescripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdescripcionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescripcionActionPerformed
+
+    private void btn_crearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crearActionPerformed
+        // TODO add your handling code here:
+        
+        String des = txtdescripcion.getText();
+        String su = txtsueldo.getText();
+        String mo = txtturno.getText();
+        
+       Perfil per = new Perfil();
+       
+       per.setDescripcion(des);
+       per.setSueldo(su);
+       per.setTurno(mo);
+    }//GEN-LAST:event_btn_crearActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,8 @@
  */
 package negocio;
 
+import datos.bdPerfil;
+
 /**
  *
  * @author Profesor
@@ -15,8 +17,18 @@ public class Perfil {
     private int sueldo;
     private String turno;
     
-    public Perfil(){}{
-        
+    public Perfil(){}
+    
+    
+    
+    public boolean CrearPerfl(Perfil p){
+        bdPerfil pe = new bdPerfil();
+        if(pe.CrearPerfil(p)){
+            return true;
+        }else{
+            return false;
+        }
+               
     }
     
    public String Perfil() {

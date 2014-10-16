@@ -24,21 +24,21 @@ public class bdPerfil {
     ResultSet rs = null;
     PreparedStatement pst = null;
 
-    public boolean asignarTurno(Perfil per){
+    public boolean CrearPerfil(Perfil per){
      
         conn = Conector.conectorBd();
     
-int cod              = per.getCod();
+//int cod              = per.getCod();
 String de        = per.getDescripcion();
 String tu        = per.getTurno();
 int su           = per.getSueldo();
      
      
-     String sql ="insert into Perfil values("+cod+","+tu+")";
+     String sql ="insert into Perfil (descrpcion, horario, sueldo) values("+de+","+tu+","+su+")";
        try{
             pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            if(rs.next()){
+            //execute es para insert executeQuery es para traer datos
+            if(pst.execute()){
                return true;
                 
             }else {
