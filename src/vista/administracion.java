@@ -113,7 +113,11 @@ public class administracion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnpagosActionPerformed
 
     private void btngastocomunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngastocomunActionPerformed
-        // TODO add your handling code here:
+gastoscomunes gm = new gastoscomunes();
+            gm.setVisible(true);
+            administracion.this.dispose();
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_btngastocomunActionPerformed
 
     private void btnedificiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnedificiosActionPerformed

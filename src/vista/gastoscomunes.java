@@ -51,6 +51,8 @@ public class gastoscomunes extends javax.swing.JFrame {
         txttotalsueldo = new javax.swing.JTextField();
         txtmes = new javax.swing.JComboBox();
         txtano = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        txtnumed = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +96,14 @@ public class gastoscomunes extends javax.swing.JFrame {
         txtano.setMaximumRowCount(2);
         txtano.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2014", "2015" }));
 
+        jLabel3.setText("num edificio");
+
+        txtnumed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnumedActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -117,33 +127,36 @@ public class gastoscomunes extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(txtluz, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 129, Short.MAX_VALUE))
+                                        .addGap(19, 19, 19)
+                                        .addComponent(jLabel8)
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtgas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtaseo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel10)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(txtgas, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel10))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(txtaseo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel12)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addComponent(txtcontingencia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(txtmes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(47, 47, 47)
-                                        .addComponent(txtagua, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtadministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txttotalsueldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel8)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(1, 1, 1)
-                                                .addComponent(jLabel12)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtadministracion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txttotalsueldo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel3))
+                                        .addGap(38, 38, 38)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtagua, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                                            .addComponent(txtnumed))))))
                         .addGap(74, 74, 74))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,7 +172,9 @@ public class gastoscomunes extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtmes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtmes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtnumed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -197,14 +212,20 @@ public class gastoscomunes extends javax.swing.JFrame {
         
         GastosComunes g = new GastosComunes();
         
-     int mes= Integer.parseInt(txtmes.getSelectedItem().toString());
-     int ano= Integer.parseInt(txtano.getSelectedItem().toString());
+     int Mes= Integer.parseInt(txtmes.getSelectedItem().toString());
+     int Ano= Integer.parseInt(txtano.getSelectedItem().toString());
+     g.setAno(Ano);
+     g.setMes(Mes);
+     
      g.setAgua(Integer.parseInt(txtagua.getText()));
      g.setLuz(Integer.parseInt(txtluz.getText()));
      g.setGas(Integer.parseInt(txtgas.getText()));
      g.setAdministracion(Integer.parseInt(txtadministracion.getText()));
      g.setAseo(Integer.parseInt(txtaseo.getText()));
      g.setContingencia(Integer.parseInt(txtcontingencia.getText()));
+     
+     Edificio cod_ed = new Edificio();
+     g.setCodEd(Integer.parseInt(txtnumed.getText()));
      
      if(g.CrearGastosComunes(g)){
            JOptionPane.showMessageDialog(this, "Gastos comunes Guardados se ingresaron correctamente");
@@ -222,6 +243,10 @@ public class gastoscomunes extends javax.swing.JFrame {
     private void txtmesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtmesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtmesActionPerformed
+
+    private void txtnumedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnumedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,6 +289,7 @@ public class gastoscomunes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -277,6 +303,7 @@ public class gastoscomunes extends javax.swing.JFrame {
     private javax.swing.JTextField txtgas;
     private javax.swing.JTextField txtluz;
     private javax.swing.JComboBox txtmes;
+    private javax.swing.JTextField txtnumed;
     private javax.swing.JTextField txttotalsueldo;
     // End of variables declaration//GEN-END:variables
 }

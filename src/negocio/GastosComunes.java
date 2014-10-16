@@ -17,6 +17,7 @@ public class GastosComunes {
     private int mes;
    // private Lavanderia cobro;
     private Edificio codcant;
+    private int codEd;
     private int luz;
     private int agua;
     private int gas;
@@ -41,28 +42,24 @@ public class GastosComunes {
        String info = "select ano, mes, codcant, luz, agua, gas, administracion, aseo, contingencia from Gastoscomunes"; 
        return info;
    }   
+
    
-  // public boolean CrearGastosComunes(GastosComunes gastocomun) {
-    //   bdgastoscomunes bdgc =  new bdgastoscomunes;
-      // if(bdgc.Creargastocomun(gastocomun)){
-       // return true;
-       // }else{
-       // return false;
-      // }  
-  // }
-       
-    /**
-     * @return the cod
-     */
-    
-    
+   
+   
+   public int getCodEd() {
+       return codEd;
+   }
 
     /**
      * @return the cobro
      */
-   public int ano() {
-       return getAno();
-   }
+    public void setCodEd(int codEd) {
+        this.codEd = codEd;
+    }
+
+    public int ano() {
+        return getAno();
+    }
 
     /**
      * @param cobro the cobro to set
