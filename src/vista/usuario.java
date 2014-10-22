@@ -245,6 +245,10 @@ public class usuario extends javax.swing.JFrame {
         
         String nom= txtnombre.getText();
         String ape= txtapellido.getText();
+        int pass= Integer.parseInt(txtPass.getText());
+        int codtipousuario= Integer.parseInt(txtcodtipousuario.getText());
+        int codes= Integer.parseInt(txtcoded.getText());
+        int rut= Integer.parseInt(txtRut.getText());
         
     }//GEN-LAST:event_AceptarActionPerformed
 
