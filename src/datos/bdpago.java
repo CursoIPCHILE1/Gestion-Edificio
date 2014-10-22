@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import negocio.Pago;
 
@@ -18,12 +19,41 @@ import negocio.Pago;
  * @author Arturoandres
  */
 public class bdpago {
- //traemos la coneccion ya instanciada en conector 
+
+    //traemos la coneccion ya instanciada en conector
+    public bdpago() {
+    }
+    
     Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
     Date fechas =null;
    //se crea un metodo llamado generar pagos
+   
+    public ArrayList<String> listarpago(int codEdif){
+    conn = Conector.conectorBd();  
+    String sql = "select distinct d.n_dpto as numeroDepto, l.pago as monto, l.fecha from lavanderia l, departamento d, edificio e where l.coddepto=d.id_dpto and d.codedi=e.cod_ed and e.cod_ed\n" +
+"="+codEdif+"";           
+        try {
+            pst = conn.prepareStatement(sql);
+            
+            ArrayList<String> ls = new ArrayList<String>();
+            
+            rs = pst.executeQuery();
+            while(rs.next()){
+            
+                ls.add(String.valueOf(rs.getInt("cod_depto")));
+                ls.add(String.valueOf(rs.getInt("monto")));
+                ls.add(String.valueOf(rs.getDate("fecha_pago")));
+            }
+            return ls;
+            
+        } catch (Exception e) {
+            return null;
+        }
+    
+    }
+    
     public boolean GenerarPagos(Pago p){
      //se establese la coneccion con la base de datos
         conn = Conector.conectorBd();
@@ -66,7 +96,5 @@ public class bdpago {
            
             return false;
         }
-       
     }
-    
 }

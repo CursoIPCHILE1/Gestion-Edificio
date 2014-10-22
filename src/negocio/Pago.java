@@ -6,6 +6,7 @@ package negocio;
 
 
 import datos.*;
+import java.util.ArrayList;
 /**
  *
  * @author Arturoandres
@@ -29,6 +30,11 @@ public class Pago {
         }
          
          
+    }
+      public ArrayList<String> listarpago(int cod){
+    
+        bdpago bp = new bdpago();
+        return bp.listarpago(cod);
     }
 
     
