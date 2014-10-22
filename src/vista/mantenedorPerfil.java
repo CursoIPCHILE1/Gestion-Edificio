@@ -160,7 +160,7 @@ public class mantenedorPerfil extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String des = txtdescripcion.getText();
-        String su = txtsueldo.getText();
+        int su = Integer.parseInt(txtsueldo.getText());
         String mo = txtturno.getText();
         
        Perfil per = new Perfil();

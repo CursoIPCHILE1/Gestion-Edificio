@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package vista;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import negocio.Usuario;
 /**
@@ -95,15 +96,26 @@ public class Inicio extends javax.swing.JFrame {
         u.setRut(Integer.parseInt(usuario));
         u.setPassword(Integer.parseInt(pass));
         
-        if(u.valida(u)){
-            JOptionPane.showMessageDialog(this, "El usuario Existe");
-            administracion admin = new administracion();
-            admin.setVisible(true);
-            Inicio.this.dispose();
-            
-        }else{
-            JOptionPane.showMessageDialog(this, "El usuario NO Existe");
+        ArrayList<String> usuarios = u.traerUsuario(u);
+        
+        int perfil = Integer.parseInt(usuarios.get(2));
+        
+        switch(perfil){
+        
+            case 1:
+                Conserje co = new Conserje();
+                co.setVisible(true);
+                co.lblNombre.setText(usuarios.get(0));
+                Inicio.this.dispose();
+                break;
+            case 4:
+                administracion admin = new administracion();
+                admin.setVisible(true);
+                Inicio.this.dispose();
+                break;
         }
+        
+        
         
         
         

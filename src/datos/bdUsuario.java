@@ -16,7 +16,37 @@ public class bdUsuario {
     Connection conn = null;
     ResultSet rs = null;
     PreparedStatement pst = null;
+
     
+    public ArrayList<String> traerUsuario(Usuario u){
+    conn = Conector.conectorBd();  
+  
+     int pa =u.getPassword();
+    
+     int ru =u.getRut();
+        
+    String sql = "SELECT u.nombre, u.coded, u.codtipousuario, e.nombre as edificio  \n" +
+"from usuario u inner join edificio e\n" +
+"ON(u.coded=e.cod_ed) where rut="+ru+" and password="+pa+"";           
+        try {
+            pst = conn.prepareStatement(sql);
+            
+            ArrayList<String> ls = new ArrayList<>();
+            
+            rs = pst.executeQuery();
+            while(rs.next()){
+                ls.add(rs.getString("nombre"));
+                ls.add(String.valueOf(rs.getInt("coded")));
+                ls.add(String.valueOf(rs.getInt("codtipousuario")));
+                ls.add(rs.getString("edificio"));
+            }
+            return ls;
+            
+        } catch (Exception e) {
+            return null;
+        }
+    
+    }    
     public Boolean valida(Usuario u){
      conn = Conector.conectorBd();
      

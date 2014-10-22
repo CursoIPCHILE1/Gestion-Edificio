@@ -113,7 +113,11 @@ public class Usuario {
     public void setPass(int pass) {
         this.password = pass;
     }
+    public ArrayList<String> traerUsuario(Usuario u){
     
+        bdUsuario lista = new bdUsuario();
+        return lista.traerUsuario(u);
+    }
     public Boolean valida(Usuario usu){
     
         bdUsuario usua = new bdUsuario();
