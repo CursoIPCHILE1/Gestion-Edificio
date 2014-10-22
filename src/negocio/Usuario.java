@@ -6,6 +6,9 @@ package negocio;
 import datos.bdLavanderia;
 import datos.bdUsuario;
 import java.util.ArrayList;
+import vista.Conserje;
+import vista.Inicio;
+import vista.administracion;
 /**
  *
  * @author Profesor
@@ -115,7 +118,31 @@ public class Usuario {
     }
     public ArrayList<String> traerUsuario(Usuario u){
     
+         
         bdUsuario lista = new bdUsuario();
+        ArrayList<String> usuarios = lista.traerUsuario(u);
+        int perfil = Integer.parseInt(usuarios.get(2));
+        
+        switch(perfil){
+        
+            case 1:
+                Conserje co = new Conserje();
+                co.setVisible(true);
+                co.lblNombre.setText(usuarios.get(0));
+                //Inicio.dispose();
+                break;
+            case 4:
+                administracion admin = new administracion();
+                admin.setVisible(true);
+                //Inicio.this.dispose();
+                break;
+            default:
+                Inicio login = new Inicio();
+                login.setVisible(true);
+                login.mensaje.setText("Usuario o pass incorrecta");
+        }
+        
+       
         return lista.traerUsuario(u);
     }
     public Boolean valida(Usuario usu){
